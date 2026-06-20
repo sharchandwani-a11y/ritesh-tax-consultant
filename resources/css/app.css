@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-body text-rtc-navy bg-white;
+}
+
+.btn-gold {
+    @apply inline-flex items-center gap-2 bg-rtc-gold hover:bg-rtc-gold-light text-rtc-navy font-semibold px-6 py-3 rounded-md transition;
+}
+
+.btn-navy {
+    @apply inline-flex items-center gap-2 bg-rtc-navy hover:bg-rtc-navy-light text-white font-semibold px-6 py-3 rounded-md transition;
+}
+
+.btn-outline {
+    @apply inline-flex items-center gap-2 border border-rtc-navy text-rtc-navy hover:bg-rtc-navy hover:text-white font-semibold px-6 py-3 rounded-md transition;
+}
+
+.section-label {
+    @apply text-rtc-gold uppercase text-sm font-semibold tracking-wide mb-2 flex items-center gap-2;
+}
+
+.section-heading {
+    @apply font-heading text-3xl md:text-4xl font-bold text-rtc-navy;
+}
+
+/* ===== Scroll-reveal animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+.reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Stagger children inside a reveal-group (e.g. grids of cards) */
+.reveal-group .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-group .reveal:nth-child(2) { transition-delay: 90ms; }
+.reveal-group .reveal:nth-child(3) { transition-delay: 180ms; }
+.reveal-group .reveal:nth-child(4) { transition-delay: 270ms; }
+.reveal-group .reveal:nth-child(5) { transition-delay: 360ms; }
+.reveal-group .reveal:nth-child(6) { transition-delay: 450ms; }
+
+/* ===== Hover-lift effect for cards ===== */
+.hover-card {
+    @apply transition-all duration-300 ease-out;
+}
+.hover-card:hover {
+    @apply -translate-y-2 shadow-xl border-rtc-gold/50;
+}
+.hover-card:hover .hover-icon {
+    @apply bg-rtc-gold text-white scale-110;
+}
+.hover-icon {
+    @apply transition-all duration-300;
+}
+/* Scroll pe sections fade-up honge — no blade changes needed */
+section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
