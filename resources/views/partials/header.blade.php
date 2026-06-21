@@ -2,14 +2,11 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
  
         {{-- Logo --}}
-        <a href="{{ route('home') }}" class="flex items-center gap-2">
-            <span class="font-heading text-3xl font-extrabold text-rtc-navy">RTC<span class="text-rtc-gold">+</span></span>
-            <span class="hidden sm:block leading-tight">
-                <span class="block text-[11px] font-semibold tracking-wide text-rtc-navy">RITESH TAX &amp;</span>
-                <span class="block text-[11px] font-semibold tracking-wide text-rtc-gold">LEGAL CONSULTANT</span>
-            </span>
-        </a>
- 
+       {{-- Logo --}}
+{{-- Logo --}}
+<a href="{{ route('home') }}" class="flex items-center">
+    <img src="{{ asset('logo.png') }}" alt="Ritesh Tax & Legal Consultant" class="h-20 w-18">
+</a>
         {{-- Desktop nav --}}
         <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
             @php
@@ -42,13 +39,22 @@
         </button>
     </div>
  
+  
     {{-- Mobile nav --}}
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3">
+<div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white px-6 py-5 space-y-4">
+    <div class="space-y-3">
         @foreach ($navLinks as $route => $label)
-            <a href="{{ route($route) }}" class="block text-sm font-semibold {{ request()->routeIs($route) ? 'text-rtc-gold' : 'text-rtc-navy' }}">{{ $label }}</a>
+            <a href="{{ route($route) }}" class="block text-base font-semibold {{ request()->routeIs($route) ? 'text-rtc-gold' : 'text-rtc-navy' }}">{{ $label }}</a>
         @endforeach
-        <a href="{{ route('contact') }}" class="btn-navy w-full justify-center !py-2.5 text-sm">Book Consultation</a>
     </div>
+
+    <div class="pt-3 border-t border-gray-100">
+        <a href="{{ route('contact') }}" class="btn-navy w-full justify-center !py-3 text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book Consultation
+        </a>
+    </div>
+</div>
 </header>
  
 <script>

@@ -53,11 +53,9 @@
         @endphp
 
         @foreach ($services as $i => $service)
-            <div class="grid lg:grid-cols-2 gap-10 items-center {{ $i % 2 == 1 ? 'lg:[&>div:first-child]:order-2' : '' }}">
-                <div class="bg-rtc-cream rounded-2xl h-64 flex items-center justify-center text-rtc-gray text-sm">
-                    [ {{ $service['title'] }} Illustration ]
-                </div>
-                <div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+        <img src="{{ asset('service'.($i + 1).'.png') }}" alt="{{ $service['title'] }}" class="w-full h-auto rounded-2xl object-cover {{ $i % 2 == 1 ? 'lg:order-2' : '' }}">
+        <div>
                     <h2 class="font-heading text-2xl font-bold text-rtc-navy">{{ $service['title'] }}</h2>
                     <p class="mt-3 text-rtc-gray">{{ $service['desc'] }}</p>
                     <ul class="mt-4 space-y-2">

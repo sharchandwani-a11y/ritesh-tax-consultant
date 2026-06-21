@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'About Us | Ritesh Tax & Legal Consultant')
 
@@ -13,19 +13,24 @@
 
 <section class="py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
-        <div class="bg-rtc-cream rounded-2xl h-96 flex items-center justify-center text-rtc-gray text-sm">
-            [ Firm / Founder Image Placeholder ]
-        </div>
+     <div class="rounded-2xl h-96 overflow-hidden">
+    <img src="{{ asset('about.png') }}" alt="Ritesh Tax & Legal Consultant" class="w-full h-full object-cover">
+</div>
         <div>
+             <p class="font-heading text-3xl font-bold text-rtc-navy mb-1"><b>Founder — Ritesh Harchandwani</b></p>
+    <p class="text-rtc-gray text-sm mb-4 leading-relaxed">
+        With years of hands-on experience in taxation and legal advisory, <b>Ritesh Harchandwani</b> founded <b>RTC </b>with a
+        simple goal — to make tax and legal compliance stress-free for individuals and businesses alike.
+    </p>
             <h2 class="font-heading text-2xl font-bold text-rtc-navy">Who We Are</h2>
             <p class="mt-4 text-rtc-gray leading-relaxed">
-                Ritesh Tax &amp; Legal Consultant (RTC) is a dedicated tax and legal advisory firm helping individuals,
-                startups and growing businesses stay compliant — without the confusion. From income tax filing to
+                <b>Ritesh Tax &amp; Legal Consultant (RTC) </b>is a dedicated tax and legal advisory firm helping individuals,
+                startups and growing businesses stay compliant - without the confusion. From income tax filing to
                 GST, TDS, accounting and business registration, we handle the paperwork so you can focus on what
                 you do best.
             </p>
             <p class="mt-4 text-rtc-gray leading-relaxed">
-                Our approach is simple: accurate work, transparent pricing, and timely delivery — every single time.
+                Our approach is simple: accurate work, transparent pricing, and timely delivery - every single time.
             </p>
         </div>
     </div>
@@ -47,18 +52,43 @@
 </section>
 
 <section class="py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-        <h2 class="section-heading">Why Clients Choose Us</h2>
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            @foreach ([
-                'Expert Guidance', 'Client Focused Approach', 'Confidential & Secure', 'Fast Turnaround Time',
-            ] as $item)
-                <div class="border border-gray-100 rounded-xl p-6">
-                    <span class="text-rtc-gold text-2xl">✓</span>
-                    <p class="font-semibold text-rtc-navy mt-3">{{ $item }}</p>
-                </div>
-            @endforeach
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <h2 class="section-heading text-left">Why Clients Choose Us</h2>
+            <p class="mt-4 text-rtc-gray leading-relaxed">
+                At Ritesh Tax & Legal Consultant, we believe that trust is built through consistent, transparent
+                and accurate work. Every client who comes to us, whether an individual filing their first ITR
+                or a growing business handling complex GST compliance, receives the same level of dedicated
+                attention and expert guidance.
+            </p>
+            <p class="mt-4 text-rtc-gray leading-relaxed">
+                Our team stays updated with the latest tax laws and regulatory changes, ensuring that your filings
+                are always accurate and compliant. We prioritize clear communication, timely delivery, and
+                complete confidentiality of your financial information, so you can focus on growing your business
+                while we handle the paperwork.
+            </p>
         </div>
+
+        <div class="grid grid-cols-2 gap-6">
+            <div class="border-2 border-rtc-gold rounded-xl p-6 text-center bg-white">
+                <span class="text-rtc-gold text-3xl">✓</span>
+                <p class="font-semibold text-lg text-rtc-navy mt-3">Expert Guidance</p>
+            </div>
+            <div class="border-2 border-rtc-gold rounded-xl p-6 text-center bg-white">
+                <span class="text-rtc-gold text-3xl">✓</span>
+                <p class="font-semibold text-lg text-rtc-navy mt-3">Client Focused Approach</p>
+            </div>
+            <div class="border-2 border-rtc-gold rounded-xl p-6 text-center bg-white">
+                <span class="text-rtc-gold text-3xl">✓</span>
+                <p class="font-semibold text-lg text-rtc-navy mt-3">Confidential & Secure</p>
+            </div>
+            <div class="border-2 border-rtc-gold rounded-xl p-6 text-center bg-white">
+                <span class="text-rtc-gold text-3xl">✓</span>
+                <p class="font-semibold text-lg text-rtc-navy mt-3">Fast Turnaround Time</p>
+            </div>
+        </div>
+
     </div>
 </section>
 

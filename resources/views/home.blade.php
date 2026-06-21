@@ -6,7 +6,7 @@
 <section class="bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-            <p class="section-label"><span class="w-6 h-px bg-rtc-gold"></span> Welcome to RTC</p>
+            <p class="section-label"><span class="w-8 h-px bg-rtc-gold"></span> Welcome to RTC</p>
             <h1 class="font-heading text-4xl md:text-5xl font-extrabold leading-tight text-rtc-navy">
                 Tax &amp; Legal<br>Expertise<br>
                 <span class="text-rtc-gold">You Can Trust</span>
@@ -26,9 +26,9 @@
                 <span>📈 Your Growth, Our Priority</span>
             </div>
         </div>
-        <div class="bg-rtc-cream rounded-2xl h-80 lg:h-96 flex items-center justify-center text-rtc-gray text-sm">
-            [ Hero Image Placeholder ]
-        </div>
+        <div class="rounded-2xl h-80 lg:h-96 overflow-hidden">
+    <img src="{{ asset('hero.png') }}" alt="Tax & Legal Expertise" class="w-full h-full object-cover">
+</div>
     </div>
 </section>
 
@@ -41,17 +41,17 @@
         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @php
                 $services = [
-                    ['title' => 'Income Tax Returns (ITR) Filing', 'desc' => 'Accurate and timely filing of your income tax returns.'],
-                    ['title' => 'GST Registration & Returns', 'desc' => 'GST registration, returns filing & compliance made simple.'],
-                    ['title' => 'TDS Compliance', 'desc' => 'TDS registration, returns filing & compliance with accuracy.'],
-                    ['title' => 'Accounting & Bookkeeping', 'desc' => 'Professional accounting services to keep your records accurate.'],
-                    ['title' => 'MSME Registration', 'desc' => 'MSME registration and benefits to grow your business.'],
-                    ['title' => 'Business Registration Services', 'desc' => 'Private Limited, LLP, Partnership firm & other registrations.'],
+                    ['title' => 'Income Tax Returns (ITR) Filing', 'desc' => 'Accurate and timely filing of your income tax returns.', 'icon' => '🧾'],
+                    ['title' => 'GST Registration & Returns', 'desc' => 'GST registration, returns filing & compliance made simple.', 'icon' => '📊'],
+                    ['title' => 'TDS Compliance', 'desc' => 'TDS registration, returns filing & compliance with accuracy.', 'icon' => '💰'],
+                    ['title' => 'Accounting & Bookkeeping', 'desc' => 'Professional accounting services to keep your records accurate.', 'icon' => '📒'],
+                    ['title' => 'MSME Registration', 'desc' => 'MSME registration and benefits to grow your business.', 'icon' => '🏭'],
+                    ['title' => 'Business Registration Services', 'desc' => 'Private Limited, LLP, Partnership firm & other registrations.', 'icon' => '🏢'],
                 ];
             @endphp
             @foreach ($services as $service)
-                <div class="border border-gray-100 rounded-xl p-6 text-left hover:shadow-lg hover:border-rtc-gold/40 transition">
-                    <div class="w-12 h-12 rounded-lg bg-rtc-cream flex items-center justify-center text-rtc-gold mb-4">📄</div>
+                <div class="hover-card border border-gray-100 rounded-xl p-6 text-left">
+                    <div class="hover-icon w-12 h-12 rounded-lg bg-rtc-cream flex items-center justify-center text-2xl mb-4">{{ $service['icon'] }}</div>
                     <h3 class="font-heading font-bold text-lg text-rtc-navy">{{ $service['title'] }}</h3>
                     <p class="text-sm text-rtc-gray mt-2">{{ $service['desc'] }}</p>
                 </div>
@@ -67,9 +67,9 @@
 {{-- ABOUT TEASER --}}
 <section class="bg-rtc-cream py-16">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
-        <div class="bg-white/50 rounded-2xl h-80 flex items-center justify-center text-rtc-gray text-sm">
-            [ About Image Placeholder ]
-        </div>
+        <div class="rounded-2xl h-80 overflow-hidden">
+    <img src="{{ asset('home2.png') }}" alt="About Ritesh Tax & Legal Consultant" class="w-full h-full object-cover">
+</div>
         <div>
             <p class="section-label">About Us</p>
             <h2 class="section-heading">Your Trusted Partner in<br>Tax &amp; Legal Compliance</h2>
@@ -130,7 +130,7 @@
                 @foreach ([
                     ['v' => '100%', 'l' => 'Accurate & Reliable'],
                     ['v' => 'On-Time', 'l' => 'Compliance'],
-                    ['v' => '500+', 'l' => 'Happy Clients'],
+                    ['v' => '50+', 'l' => 'Happy Clients'],
                     ['v' => 'Professional', 'l' => '& Dedicated'],
                 ] as $stat)
                     <div class="border border-gray-100 rounded-xl p-5 text-center hover:shadow-md transition">
@@ -145,9 +145,9 @@
 
 {{-- TESTIMONIALS --}}
 <section class="bg-rtc-cream py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-        <p class="section-label justify-center">What Clients Say</p>
-        <h2 class="section-heading">Trusted by Hundreds of Clients</h2>
+    <div class="max-w-7xl mx-auto px-6 lg:px-9 text-center">
+        <p class="section-label justify-center">What Clients Says...</p>
+        <h2 class="section-heading">Trusted by Many Clients</h2>
 
         <div class="mt-10 grid md:grid-cols-3 gap-6 text-left">
             @foreach ([
@@ -179,14 +179,14 @@
 
         <div class="grid md:grid-cols-3 gap-6">
             @forelse ($latestPosts as $post)
-                <a href="{{ route('blog.show', $post) }}" class="block group">
-                    <div class="h-44 rounded-lg bg-rtc-cream flex items-center justify-center text-rtc-gray text-xs overflow-hidden">
-                        @if($post->featured_image)
-                            <img src="{{ asset('storage/'.$post->featured_image) }}" class="w-full h-full object-cover" alt="{{ $post->title }}">
-                        @else
-                            [ Image ]
-                        @endif
-                    </div>
+               <a href="{{ route('blog.show', $post) }}" class="hover-card block group rounded-xl">
+    <div class="h-44 rounded-lg bg-rtc-cream flex items-center justify-center text-xs overflow-hidden">
+        @if($post->featured_image)
+            <img src="{{ asset('storage/'.$post->featured_image) }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ $post->title }}">
+        @else
+            <img src="{{ asset('blog.png') }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="{{ $post->title }}">
+        @endif
+    </div>
                     <p class="text-xs text-rtc-gold mt-3">{{ $post->published_at?->format('M d, Y') }} &middot; {{ $post->category ?? 'Tax Tips' }}</p>
                     <h3 class="font-semibold text-rtc-navy group-hover:text-rtc-gold mt-1">{{ $post->title }}</h3>
                     <p class="text-sm text-rtc-gray mt-1 line-clamp-2">{{ $post->excerpt }}</p>

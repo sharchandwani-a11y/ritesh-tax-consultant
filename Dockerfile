@@ -9,13 +9,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && apt-get install
 WORKDIR /app
 COPY . .
 
-RUN cp .env.example .env
-
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
 
-RUN touch database/database.sqlite
-RUN php artisan key:generate --force
+RUN mkdir -p database && touch database/database.sqlite
+RUN chmod -R 777 storage bootstrap/cache database
 RUN php artisan storage:link || true
 
 EXPOSE 10000

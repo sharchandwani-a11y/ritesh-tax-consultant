@@ -8,18 +8,19 @@ body {
     @apply font-body text-rtc-navy bg-white;
 }
 
-.btn-gold {
-    @apply inline-flex items-center gap-2 bg-rtc-gold hover:bg-rtc-gold-light text-rtc-navy font-semibold px-6 py-3 rounded-md transition;
-}
+@layer components {
+    .btn-gold {
+        @apply inline-flex items-center gap-2 bg-rtc-gold hover:bg-rtc-gold-light text-rtc-navy font-semibold px-6 py-3 rounded-md transition;
+    }
 
-.btn-navy {
-    @apply inline-flex items-center gap-2 bg-rtc-navy hover:bg-rtc-navy-light text-white font-semibold px-6 py-3 rounded-md transition;
-}
+    .btn-navy {
+        @apply inline-flex items-center gap-2 bg-rtc-navy hover:bg-rtc-navy-light text-white font-semibold px-6 py-3 rounded-md transition;
+    }
 
-.btn-outline {
-    @apply inline-flex items-center gap-2 border border-rtc-navy text-rtc-navy hover:bg-rtc-navy hover:text-white font-semibold px-6 py-3 rounded-md transition;
+    .btn-outline {
+        @apply inline-flex items-center gap-2 border border-rtc-navy text-rtc-navy hover:bg-rtc-navy hover:text-white font-semibold px-6 py-3 rounded-md transition;
+    }
 }
-
 .section-label {
     @apply text-rtc-gold uppercase text-sm font-semibold tracking-wide mb-2 flex items-center gap-2;
 }
@@ -69,4 +70,15 @@ section {
 section.in-view {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Universal hover-lift effect for ALL card-style boxes across every page */
+.rounded-xl,
+.rounded-2xl {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rounded-xl:hover,
+.rounded-2xl:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -6px rgba(15, 27, 61, 0.18);
 }

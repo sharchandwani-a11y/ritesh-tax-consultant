@@ -24,7 +24,7 @@
 <footer class="bg-rtc-navy text-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-            <span class="font-heading text-2xl font-extrabold">RTC<span class="text-rtc-gold">+</span></span>
+            <img src="{{ asset('logos.png') }}" alt="Ritesh Tax & Legal Consultant" class="h-58 w-48">
             <p class="mt-3 text-sm text-white/70 leading-relaxed">
                 Providing expert tax, accounting and legal services with integrity, accuracy and commitment.
             </p>
@@ -61,17 +61,18 @@
         <div>
             <h4 class="font-semibold text-rtc-gold mb-4">Contact Info</h4>
             <ul class="space-y-3 text-sm text-white/80">
-                <li>123, Business Park, Indore, Madhya Pradesh - 452001</li>
+                <li>Purswani Area, Satna, Madhya Pradesh - 485001</li>
                 <li>ritestaxandlegalconsultant@gmail.com</li>
                 <li>9630690069</li>
             </ul>
         </div>
     </div>
  
-    <div class="border-t border-white/10 py-5 px-6 text-center text-xs text-white/60">
+   <div class="border-t border-white/10 py-5 px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
+    <span>
         © {{ date('Y') }} Ritesh Tax &amp; Legal Consultant. All Rights Reserved. &middot;
         <a href="#" class="hover:text-white">Privacy Policy</a> &middot;
         <a href="#" class="hover:text-white">Terms &amp; Conditions</a>
-    </div>
-</footer>
- 
+    </span>
+    <span class="text-rtc-gold font-medium">Developed by Sneha Harchandwani</span>
+</div>

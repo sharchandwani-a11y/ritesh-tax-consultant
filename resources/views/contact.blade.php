@@ -7,7 +7,7 @@
 <section class="bg-rtc-cream py-14">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
         <p class="section-label justify-center">Contact Us</p>
-        <h1 class="section-heading">Get in Touch With Our Experts</h1>
+        <h1 class="section-heading">Get in Touch With Us!</h1>
     </div>
 </section>
  
@@ -70,7 +70,7 @@
                     <span class="w-10 h-10 rounded-full bg-rtc-gold/15 text-rtc-gold flex items-center justify-center">📍</span>
                     <div>
                         <h4 class="font-semibold text-rtc-navy">Office Address</h4>
-                        <p class="text-sm text-rtc-gray">123, Business Park, Indore, Madhya Pradesh - 452001</p>
+                        <p class="text-sm text-rtc-gray">Purswani Area, Satna, Madhya Pradesh - 485001</p>
                     </div>
                 </div>
                 <div class="flex gap-4">
@@ -91,10 +91,10 @@
  
             <div class="mt-8 rounded-xl overflow-hidden border border-gray-100">
                 <iframe
-                    src="https://www.google.com/maps?q=Indore,Madhya%20Pradesh&output=embed"
-                    width="100%" height="280" style="border:0;" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+    src="https://www.google.com/maps?q=Satna,Madhya%20Pradesh&output=embed"
+    width="100%" height="280" style="border:0;" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
             </div>
         </div>
     </div>
