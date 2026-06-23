@@ -82,3 +82,234 @@ section.in-view {
     transform: translateY(-4px);
     box-shadow: 0 12px 28px -6px rgba(15, 27, 61, 0.18);
 }
+
+/* ===== Mobile Design Improvements (applies site-wide) ===== */
+@media (max-width: 768px) {
+    /* Better spacing on mobile - less cramped */
+    section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    /* Smaller, better-proportioned headings on mobile */
+    .section-heading {
+        font-size: 1.75rem !important;
+        line-height: 2.25rem !important;
+    }
+
+    h1.font-heading {
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+    }
+
+    /* Buttons stack nicely and are touch-friendly */
+    .btn-navy, .btn-gold, .btn-outline {
+        padding: 0.875rem 1.25rem !important;
+        font-size: 0.9rem !important;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Cards get comfortable padding, not cramped */
+    .hover-card {
+        padding: 1.25rem !important;
+    }
+
+    /* Grid gaps tighter on mobile to avoid too much scroll */
+    .grid {
+        gap: 1rem;
+    }
+
+    /* Images/illustration boxes shorter on mobile */
+    .rounded-2xl.h-96,
+    .rounded-2xl.h-80 {
+        height: 14rem !important;
+    }
+
+    /* Better readability - slightly larger body text line-height */
+    p {
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small phones - even tighter */
+    .max-w-7xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    h1.font-heading {
+        font-size: 1.75rem !important;
+        line-height: 2.25rem !important;
+    }
+}
+
+/* ===== Extra Mobile Design Polish ===== */
+@media (max-width: 768px) {
+    /* Stronger, more elegant shadows on cards */
+    .hover-card,
+    .border.rounded-xl,
+    .bg-white.rounded-xl,
+    .bg-white.shadow-sm {
+        box-shadow: 0 4px 16px -2px rgba(15, 27, 61, 0.10) !important;
+        border-radius: 1rem !important;
+    }
+
+    /* Image/illustration boxes get softer, bigger rounded corners */
+    .rounded-2xl {
+        border-radius: 1.5rem !important;
+    }
+
+    /* Add a touch of border glow on hover-card for premium feel */
+    .hover-card {
+        border-color: rgba(201, 154, 59, 0.25) !important;
+    }
+
+    /* Better section background separation - subtle rounded top/bottom on colored sections */
+    section.bg-rtc-cream {
+        border-radius: 1.5rem;
+        margin: 0.5rem 0.75rem;
+        width: calc(100% - 1.5rem);
+    }
+
+    /* Icons inside service cards look bigger and centered nicely */
+    .hover-icon {
+        width: 3.25rem !important;
+        height: 3.25rem !important;
+    }
+
+    /* Testimonial quote mark bigger for visual flair */
+    .text-rtc-gold.text-2xl {
+        font-size: 2rem !important;
+    }
+
+    /* Slightly more breathing room between stacked cards */
+    .grid > div {
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* ===== Touch/Tap effects for mobile (replaces hover, since mobile has no mouse) ===== */
+@media (hover: none) and (pointer: coarse) {
+    .hover-card:active {
+        transform: translateY(-3px) scale(0.98);
+        box-shadow: 0 10px 24px -4px rgba(15, 27, 61, 0.20) !important;
+        border-color: rgba(201, 154, 59, 0.5) !important;
+        transition: all 0.15s ease;
+    }
+
+    .hover-card:active .hover-icon {
+        background-color: var(--tw-bg-opacity, 1) #C99A3B !important;
+        transform: scale(1.1);
+    }
+
+    /* Buttons give tap feedback */
+    .btn-navy:active,
+    .btn-gold:active,
+    .btn-outline:active {
+        transform: scale(0.96);
+        opacity: 0.9;
+    }
+
+    /* Nav links highlight briefly on tap */
+    nav a:active,
+    a:active {
+        opacity: 0.7;
+    }
+}
+/* ===== Premium Visual Polish ===== */
+
+/* Smooth gradient backgrounds for cream sections */
+.bg-rtc-cream {
+    background: linear-gradient(135deg, #FAF8F4 0%, #F5F0E6 100%);
+}
+
+/* Elegant gradient on navy buttons */
+.btn-navy {
+    background: linear-gradient(135deg, #0F1B3D 0%, #1B2C5C 100%);
+    box-shadow: 0 4px 14px -2px rgba(15, 27, 61, 0.35);
+}
+.btn-navy:hover {
+    box-shadow: 0 6px 20px -2px rgba(15, 27, 61, 0.45);
+    transform: translateY(-2px);
+}
+
+/* Gold button with subtle shine */
+.btn-gold {
+    background: linear-gradient(135deg, #C99A3B 0%, #E0B563 100%);
+    box-shadow: 0 4px 14px -2px rgba(201, 154, 59, 0.4);
+}
+.btn-gold:hover {
+    box-shadow: 0 6px 20px -2px rgba(201, 154, 59, 0.5);
+    transform: translateY(-2px);
+}
+
+/* All buttons get smooth transition */
+.btn-navy, .btn-gold, .btn-outline {
+    transition: all 0.3s ease;
+}
+
+/* Section headings get a subtle text shadow for depth */
+.section-heading {
+    text-shadow: 0 1px 2px rgba(15, 27, 61, 0.05);
+}
+
+/* Cards get a refined border + shadow combo */
+.hover-card,
+.border.rounded-xl {
+    box-shadow: 0 2px 8px -2px rgba(15, 27, 61, 0.08);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-card:hover {
+    box-shadow: 0 16px 32px -8px rgba(15, 27, 61, 0.18);
+}
+
+/* Stat/number cards get a gold accent line on top */
+.hover-card p.font-heading.font-bold {
+    background: linear-gradient(135deg, #0F1B3D 0%, #C99A3B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth underline animation on nav links */
+header nav a {
+    position: relative;
+}
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #C99A3B;
+    transition: width 0.3s ease;
+}
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Footer social icons get a nice scale-up on hover */
+footer a.rounded-full {
+    transition: all 0.3s ease;
+}
+footer a.rounded-full:hover {
+    transform: scale(1.15) translateY(-2px);
+}
+
+/* Smooth fade-in for the whole page on load */
+body {
+    animation: pageFadeIn 0.5s ease-in;
+}
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Selection color matches brand */
+::selection {
+    background: #C99A3B;
+    color: #fff;
+}

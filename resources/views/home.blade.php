@@ -38,15 +38,21 @@
         <p class="section-label justify-center">Our Services</p>
         <h2 class="section-heading">Comprehensive Solutions for<br>Your Business &amp; Personal Needs</h2>
 
+        <p class="mt-4 text-rtc-gray max-w-2xl mx-auto">
+            Whether you're an individual managing personal taxes or a growing business handling complex
+            compliance requirements, our team offers reliable, accurate and timely solutions tailored to
+            your specific needs — so you can stay compliant and focus on what matters most.
+        </p>
+
         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @php
                 $services = [
-                    ['title' => 'Income Tax Returns (ITR) Filing', 'desc' => 'Accurate and timely filing of your income tax returns.', 'icon' => '🧾'],
-                    ['title' => 'GST Registration & Returns', 'desc' => 'GST registration, returns filing & compliance made simple.', 'icon' => '📊'],
-                    ['title' => 'TDS Compliance', 'desc' => 'TDS registration, returns filing & compliance with accuracy.', 'icon' => '💰'],
-                    ['title' => 'Accounting & Bookkeeping', 'desc' => 'Professional accounting services to keep your records accurate.', 'icon' => '📒'],
-                    ['title' => 'MSME Registration', 'desc' => 'MSME registration and benefits to grow your business.', 'icon' => '🏭'],
-                    ['title' => 'Business Registration Services', 'desc' => 'Private Limited, LLP, Partnership firm & other registrations.', 'icon' => '🏢'],
+                    ['title' => 'Income Tax Returns (ITR) Filing', 'desc' => 'Accurate and timely filing of income tax returns for salaried individuals, professionals, freelancers and businesses, ensuring you claim every eligible deduction without compliance worries.', 'icon' => '🧾'],
+                    ['title' => 'GST Registration & Returns', 'desc' => 'End-to-end GST registration, monthly and quarterly return filing, and amendments — keeping your business fully compliant with the latest regulations.', 'icon' => '📊'],
+                    ['title' => 'TDS Compliance', 'desc' => 'TAN registration, TDS deduction advisory and timely quarterly return filing, helping your business stay penalty-free and audit-ready.', 'icon' => '💰'],
+                    ['title' => 'Accounting & Bookkeeping', 'desc' => 'Professional, accurate bookkeeping and monthly financial statement preparation, so your records are always organized and ready when you need them.', 'icon' => '📒'],
+                    ['title' => 'MSME Registration', 'desc' => 'Quick and hassle-free Udyam (MSME) registration, unlocking government schemes, subsidies and easier access to business credit.', 'icon' => '🏭'],
+                    ['title' => 'Business Registration Services', 'desc' => 'Complete support in choosing and registering the right legal structure — Private Limited, LLP or Partnership — for your growing business.', 'icon' => '🏢'],
                 ];
             @endphp
             @foreach ($services as $service)

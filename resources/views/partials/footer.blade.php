@@ -29,10 +29,19 @@
                 Providing expert tax, accounting and legal services with integrity, accuracy and commitment.
             </p>
             <div class="flex gap-3 mt-4">
-                @foreach (['facebook','instagram','linkedin','whatsapp'] as $icon)
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-rtc-gold flex items-center justify-center text-xs">{{ substr($icon,0,2) }}</a>
-                @endforeach
-            </div>
+    <a href="https://www.facebook.com/profile.php?id=61591193216394" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-rtc-gold flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.13 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.91h-2.33V22c4.78-.81 8.44-4.94 8.44-9.94Z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/riteshtaxconsultant/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-rtc-gold flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c2.71 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.21.6 1.75 1.14.54.54.88 1.09 1.14 1.75.24.64.41 1.37.46 2.43.05 1.06.06 1.41.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.14 1.75 4.9 4.9 0 0 1-1.75 1.14c-.64.24-1.37.41-2.43.46-1.06.05-1.41.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.75-1.14 4.9 4.9 0 0 1-1.14-1.75c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.71 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.43.26-.66.6-1.21 1.14-1.75A4.9 4.9 0 0 1 5.41.56C6.05.32 6.78.15 7.84.1 8.9.05 9.25.04 12 .04Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.8.4-1.15.75-.35.35-.57.69-.75 1.15-.14.35-.3.88-.34 1.85C3.81 9 3.8 9.32 3.8 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.8.75 1.15.35.35.69.57 1.15.75.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.8-.4 1.15-.75.35-.35.57-.69.75-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.35-.14-.88-.3-1.85-.34C14.99 3.81 14.67 3.8 12 3.8Zm0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28Zm0 1.8a3.34 3.34 0 1 0 0 6.68 3.34 3.34 0 0 0 0-6.68Zm5.4-3.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>
+    </a>
+    <a href="https://linkedin.com/ritesh harchandwani" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-rtc-gold flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.26ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+    </a>
+    <a href="https://wa.me/919630690069" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-rtc-gold flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.93.55 3.73 1.5 5.27L2 22l4.96-1.6a9.83 9.83 0 0 0 5.08 1.4c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg>
+    </a>
+</div>
         </div>
  
         <div>

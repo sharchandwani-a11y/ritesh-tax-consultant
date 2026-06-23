@@ -89,13 +89,38 @@
                 </div>
             </div>
  
-            <div class="mt-8 rounded-xl overflow-hidden border border-gray-100">
-                <iframe
-    src="https://www.google.com/maps?q=Satna,Madhya%20Pradesh&output=embed"
-    width="100%" height="280" style="border:0;" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            <div class="mt-8">
+    <h4 class="font-semibold text-rtc-navy mb-3 flex items-center gap-2">
+        <span class="text-rtc-gold">📍</span> Find Us Here
+    </h4>
+
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl group" style="padding: 4px; background: linear-gradient(135deg, #0F1B3D 0%, #C99A3B 100%);">
+        <div class="rounded-xl overflow-hidden relative">
+            <iframe
+                src="https://www.google.com/maps?q=Satna,Madhya%20Pradesh&output=embed"
+                width="100%" height="400" style="border:0; filter: saturate(1.1) contrast(1.05);" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full transition-transform duration-700 group-hover:scale-105">
+            </iframe>
+
+            {{-- Floating info card --}}
+            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-xl shadow-xl px-5 py-4 max-w-[240px]">
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="w-8 h-8 rounded-full bg-rtc-navy flex items-center justify-center text-rtc-gold text-sm font-bold">RTC</span>
+                    <p class="font-heading font-bold text-rtc-navy text-sm">Ritesh Tax & Legal Consultant</p>
+                </div>
+                <p class="text-xs text-rtc-gray">Satna, Madhya Pradesh</p>
             </div>
+
+            {{-- Get Directions button --}}
+            <a href="https://www.google.com/maps?q=Satna,Madhya%20Pradesh" target="_blank"
+               class="absolute bottom-4 right-4 bg-rtc-navy shadow-xl rounded-lg px-5 py-2.5 text-sm font-semibold text-white hover:bg-rtc-gold hover:text-rtc-navy transition-all flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                Get Directions
+            </a>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </section>

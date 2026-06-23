@@ -14,14 +14,19 @@
 <section class="py-16">
     <div class="max-w-3xl mx-auto px-6 lg:px-10 space-y-4">
         @php
-            $faqs = [
-                ['q' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, aperiam.?', 'a' => 'PAN card, Aadhaar card, Form 16 (salaried), bank statements, investment proofs (80C/80D etc.), and details of any other income (capital gains, rent, interest) are generally required.'],
-                ['q' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, enim!?', 'a' => 'Typically GST registration is completed within 3–7 working days once all documents and verification are submitted correctly, subject to government processing timelines.'],
-                ['q' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, molestias.?', 'a' => 'TDS returns are filed quarterly — due dates generally fall on 31st July, 31st October, 31st January, and 31st May for each respective quarter.'],
-                ['q' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, itaque??', 'a' => 'Simply contact us via call, WhatsApp, or the booking form. Share your requirement and documents, and our experts will review and get back to you with a clear plan and pricing.'],
-                ['q' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloribus.?', 'a' => 'Yes — most of our services (ITR, GST, accounting, business registration) are handled fully online, so we can assist clients anywhere in India.'],
-            ];
-        @endphp
+    $faqs = [
+        ['q' => 'What documents are required for ITR filing?', 'a' => 'You will typically need your PAN card, Aadhaar card, Form 16 (for salaried individuals), bank statements, investment proofs under sections 80C/80D, and details of any additional income such as capital gains, rental income, or interest earned.'],
+        ['q' => 'How long does GST registration take?', 'a' => 'GST registration is usually completed within 3 to 7 working days, provided all required documents are submitted accurately and verification is processed smoothly by the GST department.'],
+        ['q' => 'When are TDS returns due?', 'a' => 'TDS returns are filed quarterly, with due dates typically falling on 31st July, 31st October, 31st January, and 31st May for each respective quarter of the financial year.'],
+        ['q' => 'What is the process for getting a consultation?', 'a' => 'Simply reach out to us via phone call, WhatsApp, or our online booking form. Share your requirements and relevant documents, and our experts will review your case and respond with a clear plan along with transparent pricing.'],
+        ['q' => 'Do you provide services to clients across India?', 'a' => 'Yes. Most of our services — including ITR filing, GST registration, accounting, and business registration — are handled entirely online, allowing us to assist clients anywhere in India without requiring an in-person visit.'],
+        ['q' => 'What happens if I miss the ITR filing deadline?', 'a' => 'Missing the deadline can result in a late filing fee ranging from ₹1,000 to ₹5,000, along with applicable interest on any unpaid tax. Filing as early as possible helps you avoid these penalties and ensures faster processing of refunds.'],
+        ['q' => 'Is GST registration mandatory for my business?', 'a' => 'GST registration becomes mandatory once your annual turnover exceeds ₹40 lakh for goods or ₹20 lakh for services (limits may vary by state). However, certain businesses are required to register regardless of turnover, and we can help assess your specific requirement.'],
+        ['q' => 'What are the benefits of MSME (Udyam) registration?', 'a' => 'MSME registration unlocks several advantages, including easier access to collateral-free business loans, government subsidies, priority in tender allocation, and protection against delayed payments from buyers.'],
+        ['q' => 'Should I register my business as a Private Limited Company or an LLP?', 'a' => 'The right structure depends on factors like your funding plans, liability protection needs, and compliance capacity. Private Limited companies are better suited for businesses seeking external investment, while LLPs offer simpler compliance for smaller, owner-managed businesses. We can guide you through this decision based on your specific goals.'],
+        ['q' => 'How much do your services cost?', 'a' => 'Our pricing varies depending on the complexity and scope of each service. We offer a free initial consultation to understand your requirements, after which we provide transparent, upfront pricing with no hidden charges.'],
+    ];
+@endphp
  
         @foreach ($faqs as $i => $faq)
             <details class="group border border-gray-100 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden" {{ $i === 0 ? 'open' : '' }}>
